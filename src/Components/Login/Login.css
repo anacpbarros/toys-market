@@ -1,0 +1,35 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  background-color: blue;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-login {
+  margin: auto;
+  background-color: lightgray;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.username {
+    margin-bottom: 10px;
+}
+
+.user-login p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-page-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 10px 0;
+}

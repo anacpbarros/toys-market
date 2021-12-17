@@ -1,0 +1,11 @@
+.cadastro-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 100px auto 0;
+   background-color: lightskyblue;
+   padding-top: 20px;
+   width: 500px;
+   border-radius: 15px;
+   height: 400px;
+}

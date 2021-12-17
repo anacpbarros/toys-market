@@ -1,0 +1,6 @@
+.my-cart, .button-finalizar-pedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
