@@ -9,6 +9,7 @@ const ListagemProdutos = ({
   productsList,
   fetchProductsHandler,
   onClickAddHandler,
+  block
 }) => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,18 +22,20 @@ const ListagemProdutos = ({
   const onClickAdminResources = () => {
     navigate("/produtos");
   };
-  
+
   const productItem = productsList.map((product) => (
     <div className="product-items">
       <Card
         title={product.title}
-        actions={[<PlusCircleOutlined onClick={() => onClickAddHandler(product.id)} />]}
+        actions={[
+          <PlusCircleOutlined onClick={() => onClickAddHandler(product.id)} />,
+        ]}
       >
         <p>{product.description}</p>
       </Card>
     </div>
   ));
-  
+
   const loading = (
     <div className="loading">
       <>
@@ -64,10 +67,11 @@ const ListagemProdutos = ({
                   key="2"
                   type="secondary"
                   onClick={onClickAdminResources}
+                  disabled={block}
                 >
                   Área do Admin
                 </Button>,
-                <Button key="1" type="primary" onClick={onClickMyCard}>
+                <Button key="1" type="primary" onClick={onClickMyCard} >
                   Meu Carrinho
                 </Button>,
               ]}

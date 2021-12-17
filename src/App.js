@@ -1,4 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -129,7 +131,7 @@ function App() {
     });
   };
   const onClickFinalizarPedido = (pedido) => {
-    createNewPedido({ pedido });
+  
   };
 
   return (
@@ -144,6 +146,7 @@ function App() {
               productsList={productsList}
               onClickAddHandler={onClickAddHandler}
               fetchProductsHandler={fetchProductsHandler}
+              block={!isAdmin}
             />
           }
         />
